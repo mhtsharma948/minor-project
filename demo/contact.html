@@ -1,0 +1,55 @@
+<!-- Created by mohit on 23/10/16.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>online project allocation</title>
+    <meta name="description" content="contact us page">
+    <meta name="author" content="mohit sharma" />
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <link rel="stylesheet" media="screen" href="css/header.css">
+    <link rel="stylesheet" media="screen" href="css/geolocation.css">
+    <link rel="stylesheet" media="screen" href="css/login.css">
+
+</head>
+<body>
+
+<div id="particles-js"></div>
+<div class = "Header"><img src="images\Untitled3.png" style="float: left; height: 58px"><div style="margin-top: 10px;"><b>Online Project Allocation</b></div></div>
+<div class = "Navigation">
+    <ul class = "nav1">
+        <li class = "nav2"><a href="index.html">Home</a></li>
+        <li class = "nav2"><a href="#news">News</a></li>
+        <li class = "nav2"><a class="active" href="contact.html">Contact</a></li>
+        <li class = "nav2"><a href="#about">About</a></li>
+    </ul>
+    <div class="Login" id="signin"><div style="margin-top: 3px">signin</div></div>
+    <div class="Login" id="signup"><div style="margin-top: 3px">signup</div></div>
+</div>
+
+<!--Geo Location-->
+<div id="map"></div>
+<script>
+    function initMap() {
+        var jaipur = {lat: 26.922070, lng: 26.922070};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: jaipur
+        });
+        var marker = new google.maps.Marker({
+            position: jaipur,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+<!-- scripts -->
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+
+
+</body>
+</html>
